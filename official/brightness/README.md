@@ -1,6 +1,6 @@
-# Brightness Control
+# ![icon](assets/icon.png)Brightness Control
 
-![icon](assets/icon.png = 32x32) Adjust your PC (and mobile optionally) screen's brightness.
+Adjust your PC (and mobile optionally) screen's brightness.
 
 ## Credits
 
