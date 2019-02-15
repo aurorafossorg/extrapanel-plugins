@@ -22,4 +22,4 @@ Packs are just lists of plugins for the user to install. They're useful to bundl
 
 ## Developing plugins/packs
 
-See [CONTRIBUTING.md](contributing.md).
+See [CONTRIBUTING.md](https://gitlab.com/aurorafossorg/p/extra-panel/plugins/blob/master/CONTRIBUTING.md).
