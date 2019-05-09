@@ -1,0 +1,9 @@
+{
+	"id": "musicPlayer",
+	"name": "Music Player",
+	"description": "Control various music players.",
+	"icon": "assets/icon.png",
+	"authors": ["Ev1lbl0w"],
+	"version": "0.0.1",
+	"url": "unspecified"
+}

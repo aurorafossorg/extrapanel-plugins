@@ -1,0 +1,9 @@
+{
+	"id": "gitNotifier",
+	"name": "Git Notifier",
+	"description": "Show notifications from Git providers.",
+	"icon": "assets/icon.png",
+	"authors": ["Ev1lbl0w"],
+	"version": "0.0.1",
+	"url": "unspecified"
+}

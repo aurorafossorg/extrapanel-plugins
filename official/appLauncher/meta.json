@@ -1,0 +1,9 @@
+{
+	"id": "applauncher",
+	"name": "Application Launcher",
+	"description": "Launch applications in the computer.",
+	"icon": "assets/icon.png",
+	"authors": ["Ev1lbl0w"],
+	"version": "0.0.1",
+	"url": "null"
+}

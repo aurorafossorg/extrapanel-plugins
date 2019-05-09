@@ -1,0 +1,9 @@
+{
+	"id": "hwTemp",
+	"name": "Hardware Temperature",
+	"description": "Show current temperature of hardware.",
+	"icon": "assets/icon.png",
+	"authors": ["Ev1lbl0w"],
+	"version": "0.0.1",
+	"url": "unspecified"
+}

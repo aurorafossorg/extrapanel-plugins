@@ -1,8 +1,9 @@
 {
-	"id": "off-brightctrl",
+	"id": "brightctrl",
 	"name": "Brightness Control",
 	"description": "Adjust your PC (and mobile optionally) screen's brightness.",
 	"icon": "assets/icon.png",
-	"author": ["Ev1lbl0w"],
-	"version": "0.0.1"
+	"authors": ["Ev1lbl0w"],
+	"version": "0.0.1",
+	"url": "null"
 }

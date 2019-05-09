@@ -1,10 +1,7 @@
 min = nil
 max = nil
-minAbs = nil
-maxAbs = nil
-currBrigth = nil
---brightFile = nil
-path = "/sys/class/backlight/intel_backlight/"
+currVolume = nil
+currMuted = nil
 
 --setup() - Sets the plugin up for running. Receives it's configuration and returns whether is good to go or an error ocurred
 function setup(config)
@@ -22,40 +19,36 @@ function setup(config)
 		error("Illegal state: min >= max or max <= min")
 	end
 
-	-- Transforms max and min from percent to number
-	max = max / 100
-	min = min / 100
-
-	-- Opens backlight file
-	--brightFile = io.open(path .. "brightness", "r+")
-	maxBrightFile = io.open(path .. "max_brightness", "r")
-	local temp = maxBrightFile:read()
-	maxBrightFile:close()
-	maxAbs = temp * max
-	minAbs = temp * min
-
 	-- Good to go
 	return 0
 end
 
 --query() - Queries information from the host; only returns info if state changed after last call
 function query()
+	-- Get current volume
+	output = io.popen("pulseaudio-ctl full-status", "r")
+	for vol, outMuted, inMuted in string.gmatch(output:read(), "(%w+) (%w+) (%w+)") do
+		newVolume = vol
+		newMuted = outMuted
+	end
+	changed = (newVolume ~= currVolume) or (newMuted ~= currMuted)
+	currVolume = newVolume
+	currMuted = newMuted
 
-	local reader = io.open(path .. "brightness", "r")
-	local newValue = reader:read() / maxAbs * 100
-	reader:close()
-	local changed = newValue ~= currBrigth
-	currBrigth = newValue
-
+	output:close()
+	
 	if changed then
-		return(currBrigth)
+		return(currVolume .. ";" .. currMuted)
 	else
 		return(nil)
 	end
+	
 end
 
 --change() - Changes behaviour on host according to the instructions of controller
 function change(action)
-	local writer = io.popen("echo " .. tostring(action / 100 * maxAbs) ..  " > " .. path .. "brightness", "w")
-	writer:close()
+	for vol, muted in string.gmatch(action, "(%w+);(%w+)") do
+		io.popen("pulseaudio-ctl set " .. vol, "w");
+		io.popen("pulseaudio-ctl mute " .. muted, "w");
+	end
 end

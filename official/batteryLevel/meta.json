@@ -1,0 +1,9 @@
+{
+	"id": "battLevel",
+	"name": "Battery Level",
+	"description": "Check battery level and status.",
+	"icon": "assets/icon.png",
+	"authors": ["Ev1lbl0w"],
+	"version": "0.0.1",
+	"url": "undefined"
+}

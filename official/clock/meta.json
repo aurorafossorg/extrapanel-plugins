@@ -1,0 +1,9 @@
+{
+	"id": "clock",
+	"name": "Clock",
+	"description": "Display current time and date.",
+	"icon": "assets/icon.png",
+	"authors": ["Ev1lbl0w"],
+	"version": "0.0.1",
+	"url": "null"
+}
