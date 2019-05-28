@@ -1,4 +1,4 @@
-# ![icon](assets/icon.png)App Launcher
+# ![icon](assets/icon.png)Application Launcher
 
 Launch applications in the computer.
 

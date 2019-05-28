@@ -1,6 +1,6 @@
-# ![icon](assets/icon.png)Brightness Control
+# ![icon](assets/icon.png)Hardware Load
 
-Adjust your PC (and mobile optionally) screen's brightness.
+Show usage of many hardware components.
 
 ## Credits
 

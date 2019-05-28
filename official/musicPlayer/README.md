@@ -1,6 +1,6 @@
-# ![icon](assets/icon.png)Brightness Control
+# ![icon](assets/icon.png)Music Player
 
-Adjust your PC (and mobile optionally) screen's brightness.
+Control various music players.
 
 ## Credits
 

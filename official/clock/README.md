@@ -1,6 +1,6 @@
-# ![icon](assets/icon.png)Brightness Control
+# ![icon](assets/icon.png)Clock
 
-Adjust your PC (and mobile optionally) screen's brightness.
+Display current time and date.
 
 ## Credits
 
