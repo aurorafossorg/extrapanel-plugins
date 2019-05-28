@@ -1,9 +1,0 @@
-{
-	"id": "tunaaddon",
-	"name": "Tuna Addon",
-	"description": "Tune your tunas to your tunnings!",
-	"icon": "assets/icon.png",
-	"authors": ["Ev1lbl0w"],
-	"version": "0.0.1",
-	"url": "null"
-}
