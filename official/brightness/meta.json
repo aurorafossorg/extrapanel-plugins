@@ -5,5 +5,30 @@
 	"icon": "assets/icon.png",
 	"authors": ["Ev1lbl0w"],
 	"version": "0.0.1",
-	"url": "https://gitlab.com/aurorafossorg/p/extra-panel/plugins/tree/master/official/brightness"
+	"url": "https://gitlab.com/aurorafossorg/p/extra-panel/plugins/tree/master/official/brightness",
+
+	"install-steps": {
+		"lua-deps": ["lfs"],
+		"root": {
+			"commands": [
+				{
+					"windows": "null",
+					"darwin": "null",
+					"linux": "chmod +rw /sys/class/backlight/*/brightness"
+				}
+			]
+		}
+	},
+
+	"uninstall-steps": {
+		"root": {
+			"commands": [
+				{
+					"windows": "null",
+					"darwin": "null",
+					"linux": "chmod -rw /sys/class/backlight/*/brightness"
+				}
+			]
+		}
+	}
 }

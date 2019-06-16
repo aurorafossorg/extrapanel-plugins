@@ -40,7 +40,6 @@ end
 
 --query() - Queries information from the host; only returns info if state changed after last call
 function query()
-
 	local reader = io.open(path .. "brightness", "r")
 	local newValue = reader:read() / maxAbs * 100
 	reader:close()
@@ -56,6 +55,8 @@ end
 
 --change() - Changes behaviour on host according to the instructions of controller
 function change(action)
-	local writer = io.popen("echo " .. tostring(action / 100 * maxAbs) ..  " > " .. path .. "brightness", "w")
+	--local writer = io.popen("echo " .. tostring(action / 100 * maxAbs) ..  " > " .. path .. "brightness", "w")
+	local writer = io.open(path .. "brightness", "w")
+	writer:write(tostring(math.floor(action / 100 * maxAbs)))
 	writer:close()
 end
